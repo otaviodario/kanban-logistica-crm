@@ -18,7 +18,7 @@ O projeto foi concebido para mitigar gargalos operacionais comuns em e-commerce 
 
 O ecossistema é dividido em três camadas principais que se comunicam de forma assíncrona e otimizada por cache:
 
-```text
+```
                      ┌─────────────────────────────┐
                      │   Google Sheets Database    │
                      │    (Faturamento / CRM)      │
@@ -34,6 +34,8 @@ O ecossistema é dividido em três camadas principais que se comunicam de forma 
 │ SPA Frontend (Kanban)│   │  Workers KV    │   │  APIs Externas   │
 │  Tailwind + JS ES6   │   │   (Caching)    │   │ (ERP/CRM/Cloudf.)│
 └──────────────────────┘   └────────────────┘   └──────────────────┘
+
+```
 
 1.  Camada de Dados e Regras Físicas (Google Sheets / GAS): Orquestra o banco de
     dados de faturamento em abas divididas por mês/ano, realiza cálculos
@@ -150,6 +152,8 @@ A. Fluxo de Vida do Pedido e Automação de Rastreio
 
 B. Minimização de Gargalos por Cache Centralizado
 
+```
+
 [Alteração Local na Planilha]
              │
              ▼
@@ -168,6 +172,8 @@ B. Minimização de Gargalos por Cache Centralizado
                            │
                            ▼
                 [Injeta Logs no Kanban]
+
+```
 
 🔒 Segurança e Práticas de Engenharia Aplicadas
 
